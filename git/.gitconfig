@@ -1,0 +1,6 @@
+[user]
+	name = Alessandro Caglio
+	signingkey = D58770FA2370984A
+	email = acaglio@redhat.com
+[init]
+	defaultBranch = main
