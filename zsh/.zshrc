@@ -41,6 +41,8 @@ bindkey -e
 bindkey "^[[H"   beginning-of-line
 bindkey "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
+bindkey '^[[1;5C' emacs-forward-word
+bindkey '^[[1;5D' emacs-backward-word
 
 # History
 HISTSIZE=5000
@@ -83,6 +85,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export PATH="/home/dev/bin:/home/dev/.local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 
-if [ -f "/home/dev/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/dev/.config/fabric/fabric-bootstrap.inc"; fi
+if [ -f "$HOME/.config/fabric/fabric-bootstrap.inc" ]; then . "$HOME/.config/fabric/fabric-bootstrap.inc"; fi
